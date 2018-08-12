@@ -47,13 +47,13 @@ app: APP_TOKEN_HERE
 $ pushover-cli.phar help send
 
 Usage:
-  send [options] [--] [<message>] [<title>]
+  send [options] [--] [<message>]
 
 Arguments:
   message                         The body of the message to be sent [default: ""]
-  title                           The title of the message to be sent [default: ""]
 
 Options:
+  -t, --title[=TITLE]             The title of the message to be sent
   -l, --link[=LINK]               The link that accompanies the message
   -p, --priority[=PRIORITY]       The priority the message is to be sent with (0 is default, 1 is ignore quiet hours, 2 is repeat until acknowledged) [default: 0]
       --token[=TOKEN]             The app token to be used - find in Pushover dashboard
@@ -69,7 +69,6 @@ Options:
 
 Help:
   Send a message to Pushover
-
 
 ```
 
