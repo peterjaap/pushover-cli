@@ -38,7 +38,7 @@ app: APP_TOKEN_HERE
 ## How to use
 
 ```bash
-$ pushover.phar help send
+$ pushover-cli.phar help send
 
   Usage:
     send [options] [--] [<message>] [<title>]

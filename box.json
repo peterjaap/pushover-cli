@@ -1,5 +1,5 @@
 {
-  "alias": "pushover.phar",
+  "alias": "pushover-cli.phar",
   "chmod": "0755",
   "compactors": [
     "Herrera\\Box\\Compactor\\Json",
@@ -23,6 +23,6 @@
     }
   ],
   "main": "bin/pushover",
-  "output": "dist/pushover.phar",
+  "output": "dist/pushover-cli.phar",
   "stub": true
 }
