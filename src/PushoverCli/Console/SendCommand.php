@@ -94,9 +94,9 @@ class SendCommand extends Command
         $message = new \Pushover();
         $message->setUser($this->config['user'] ?? $this->input->getOption('user'));
         $message->setToken($this->config['token'] ?? $this->input->getOption('token'));
-        $message->setTitle($this->input->getOption('title'));
+        $message->setTitle($this->config['title'] ?? $this->input->getOption('title'));
         $message->setMessage($this->input->getArgument('message') ?? $this->input->getOption('title)'));
-        $message->setPriority($this->input->getOption('priority'));
+        $message->setPriority($this->config['priority'] ?? $this->input->getOption('priority'));
         $message->setUrl($this->input->getOption('link'));
         $message->setUrlTitle($this->input->getOption('link-title'));
         $message->send();
