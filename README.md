@@ -40,28 +40,30 @@ app: APP_TOKEN_HERE
 ```
 $ pushover-cli.phar help send
 
-  Usage:
-    send [options] [--] [<message>] [<title>]
-  
-  Arguments:
-    message                         The body of the message to be sent [default: ""]
-    title                           The title of the message to be sent [default: ""]
-  
-  Options:
-    -t, --title[=TITLE]             The title of the message to be sent
-    -l, --link[=LINK]               The link that accompanies the message
-    -p, --priority[=PRIORITY]       The priority the message is to be sent with (0 is default, 1 is ignore quiet hours, 2 is repeat until acknowledged) [default: 0]
-    -h, --help                      Display this help message
-    -q, --quiet                     Do not output any message
-    -V, --version                   Display this application version
-        --ansi                      Force ANSI output
-        --no-ansi                   Disable ANSI output
-    -n, --no-interaction            Do not ask any interactive question
-    -lt, --link-title[=LINK-TITLE]  The title for the link that accompanies the message
-    -v|vv|vvv, --verbose            Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
-  
-  Help:
-    Send a message to Pushover
+Usage:
+  send [options] [--] [<message>] [<title>]
+
+Arguments:
+  message                         The body of the message to be sent [default: ""]
+  title                           The title of the message to be sent [default: ""]
+
+Options:
+  -l, --link[=LINK]               The link that accompanies the message
+  -p, --priority[=PRIORITY]       The priority the message is to be sent with (0 is default, 1 is ignore quiet hours, 2 is repeat until acknowledged) [default: 0]
+      --token[=TOKEN]             The app token to be used - find in Pushover dashboard
+      --user[=USER]               The user token to be used - find in Pushover dashboard
+  -h, --help                      Display this help message
+  -q, --quiet                     Do not output any message
+  -V, --version                   Display this application version
+      --ansi                      Force ANSI output
+      --no-ansi                   Disable ANSI output
+  -n, --no-interaction            Do not ask any interactive question
+  -lt, --link-title[=LINK-TITLE]  The title for the link that accompanies the message
+  -v|vv|vvv, --verbose            Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  Send a message to Pushover
+
 
 ```
 

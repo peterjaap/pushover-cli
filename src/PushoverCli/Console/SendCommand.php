@@ -43,7 +43,6 @@ class SendCommand extends Command
             ->setDescription($this->description)
             ->addArgument('message', null, 'The body of the message to be sent', '')
             ->addArgument('title', null, 'The title of the message to be sent', '')
-            ->addOption('title', 't', InputOption::VALUE_OPTIONAL, 'The title of the message to be sent')
             ->addOption('link', 'l', InputOption::VALUE_OPTIONAL, 'The link that accompanies the message', null)
             ->addOption('link-title', 'lt', InputOption::VALUE_OPTIONAL, 'The title for the link that accompanies the message', null)
             ->addOption('priority', 'p', InputOption::VALUE_OPTIONAL, 'The priority the message is to be sent with (0 is default, 1 is ignore quiet hours, 2 is repeat until acknowledged)', 0)
