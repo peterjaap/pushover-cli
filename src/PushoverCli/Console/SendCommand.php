@@ -62,9 +62,9 @@ class SendCommand extends Command
 
         $this->config = $this->getConfig();
 
-        $this->sendMessage();
+        $message = $this->sendMessage();
 
-        $this->output->writeln('Sending message; ' . $input->getArgument('message'));
+        $this->output->writeln('Sending message; ' . $message->getMessage());
     }
 
     /**
@@ -95,11 +95,13 @@ class SendCommand extends Command
         $message->setUser($this->config['user'] ?? $this->input->getOption('user'));
         $message->setToken($this->config['token'] ?? $this->input->getOption('token'));
         $message->setTitle($this->config['title'] ?? $this->input->getOption('title'));
-        $message->setMessage($this->input->getArgument('message') ?? $this->input->getOption('title)'));
+        $message->setMessage(!empty($this->input->getArgument('message')) ? $this->input->getArgument('message') : $message->getTitle());
         $message->setPriority($this->config['priority'] ?? $this->input->getOption('priority'));
         $message->setUrl($this->input->getOption('link'));
         $message->setUrlTitle($this->input->getOption('link-title'));
         $message->send();
+
+        return $message;
     }
 
 }
