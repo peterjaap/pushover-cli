@@ -46,7 +46,9 @@ class SendCommand extends Command
             ->addOption('title', 't', InputOption::VALUE_OPTIONAL, 'The title of the message to be sent')
             ->addOption('link', 'l', InputOption::VALUE_OPTIONAL, 'The link that accompanies the message', null)
             ->addOption('link-title', 'lt', InputOption::VALUE_OPTIONAL, 'The title for the link that accompanies the message', null)
-            ->addOption('priority', 'p', InputOption::VALUE_OPTIONAL, 'The priority the message is to be sent with (0 is default, 1 is ignore quiet hours, 2 is repeat until acknowledged)', 0);
+            ->addOption('priority', 'p', InputOption::VALUE_OPTIONAL, 'The priority the message is to be sent with (0 is default, 1 is ignore quiet hours, 2 is repeat until acknowledged)', 0)
+            ->addOption('token', null, InputOption::VALUE_OPTIONAL, 'The app token to be used - find in Pushover dashboard')
+            ->addOption('user', null, InputOption::VALUE_OPTIONAL, 'The user token to be used - find in Pushover dashboard');
     }
 
     /**
@@ -91,8 +93,8 @@ class SendCommand extends Command
     protected function sendMessage()
     {
         $message = new \Pushover();
-        $message->setUser($this->config['user']);
-        $message->setToken($this->config['token']);
+        $message->setUser($this->config['user'] ?? $this->input->getOption('user'));
+        $message->setToken($this->config['token'] ?? $this->input->getOption('token'));
         $message->setTitle($this->input->getOption('title'));
         $message->setMessage($this->input->getArgument('message') ?? $this->input->getOption('title)'));
         $message->setPriority($this->input->getOption('priority'));
