@@ -7,7 +7,7 @@ Yet another [Pushover](https://www.pushover.net) CLI tool.
 Download the phar file:
 
 ```
-wget https://github.com/peterjaap/pushover-cli/releases/download/0.1.0/pushover-cli.phar
+wget https://github.com/peterjaap/pushover-cli/releases/download/0.1.1/pushover-cli.phar
 ```
 
 Chmod it & move it:
