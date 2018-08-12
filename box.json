@@ -1,0 +1,28 @@
+{
+  "alias": "pushover.phar",
+  "chmod": "0755",
+  "compactors": [
+    "Herrera\\Box\\Compactor\\Json",
+    "Herrera\\Box\\Compactor\\Php"
+  ],
+  "compression": "GZ",
+  "directories": [
+    "src"
+  ],
+  "files": [
+    "README.md",
+    "LICENSE"
+  ],
+  "finder": [
+    {
+      "name": "*.php",
+      "exclude": [
+        "Tests"
+      ],
+      "in": "vendor"
+    }
+  ],
+  "main": "bin/pushover",
+  "output": "dist/pushover.phar",
+  "stub": true
+}

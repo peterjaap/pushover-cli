@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/../vendor/autoload.php';
+
+use PushoverCli\Application;
+use PushoverCli\Console\SendCommand;
+
+$application = new Application('pushover-cli', '0.1.0');
+$application->add(new SendCommand);
+$application->run();
