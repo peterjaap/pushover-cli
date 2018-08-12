@@ -23,6 +23,12 @@ Add alias to your `~/.bashrc` / `~/.zshrc` file (optional);
 alias po=pushover-cli.phar send
 ```
 
+Send it!
+
+```
+po "#sendit"
+```
+
 ## Configuration
 
 1. Download the Pushover app in the [iOS App Store](https://itunes.apple.com/nl/app/pushover-notifications/id506088175?mt=8) or the [Google Play Store](https://play.google.com/store/apps/details?id=net.superblock.pushover&hl=nl)
