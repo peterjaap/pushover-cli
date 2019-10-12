@@ -103,5 +103,4 @@ class SendCommand extends Command
 
         return $message;
     }
-
 }
